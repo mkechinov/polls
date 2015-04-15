@@ -1,0 +1,173 @@
+{
+    "id": 1,
+    "title": "Типичный опрос",
+    "description": "Тестовый образец для опытов",
+    "questions": [
+
+        {
+            "id": 1,
+            "input": "string",
+            "title": "Ваше имя",
+            "description": "Укажите ваше полное имя",
+            "value": "",
+            "start": true,
+            "datatype": "string",
+            "next": 2,
+            "validates": {
+                "presence": true,
+                "length": {
+                    "min": 4,
+                    "max": 30
+                }
+            }
+        },
+
+        {
+            "id": 2,
+            "input": "radio",
+            "title": "Пол",
+            "description": "Ваш пол?",
+            "value": "other",
+            "datatype": "string",
+            "next": 3,
+            "variants": [
+                {
+                    "title": "Мужской",
+                    "value": "male",
+                    "position": 0
+                },
+                {
+                    "title": "Женский",
+                    "value": "female",
+                    "position": 10
+                },
+                {
+                    "title": "Разный",
+                    "value": "other",
+                    "position": 20
+                }
+            ]
+        },
+
+        {
+            "id": 3,
+            "input": "checkbox",
+            "title": "Интересы",
+            "description": "Перечислите ваши интересы",
+            "datatype": "string",
+            "variants": [
+                {
+                    "title": "Кино",
+                    "value": "movie",
+                    "position": 0
+                },
+                {
+                    "title": "Музыка",
+                    "value": "music",
+                    "position": 10
+                },
+                {
+                    "title": "Книги",
+                    "value": "books",
+                    "position": 20
+                }
+            ],
+            "value": ["movie", "music"],
+            "next": 4
+        },
+
+        {
+            "id": 4,
+            "input": "text",
+            "title": "Биография",
+            "datatype": "text",
+            "description": "Напишите немного о себе",
+            "value": "",
+            "next": 5
+        },
+
+        {
+            "id": 5,
+            "input": "router",
+            "title": "Модель телефона",
+            "description": "Какой у вас телефон?",
+            "datatype": "string",
+            "value": "",
+            "next": null,
+            "variants": [
+                {
+                    "title": "iPhone",
+                    "value": "iphone",
+                    "position": 0,
+                    "next": 6
+                },
+                {
+                    "title": "Android",
+                    "value": "android",
+                    "position": 10,
+                    "next": 7
+                },
+                {
+                    "title": "Windows Phone",
+                    "value": "windows_phone",
+                    "position": 20,
+                    "next": 8
+                }
+            ]
+        },
+
+        {
+            "id": 6,
+            "input": "range",
+            "title": "Стоимость",
+            "datatype": "integer",
+            "description": "Выберите примерную стоимость",
+            "min": 0,
+            "max": 1000,
+            "value": "300",
+            "next": 9
+        },
+
+        {
+            "id": 7,
+            "input": "range",
+            "title": "Мощность",
+            "datatype": "integer",
+            "description": "Выберите примерную мощность",
+            "min": 0,
+            "max": 1000,
+            "value": "300",
+            "next": 9
+        },
+
+        {
+            "id": 8,
+            "input": "range",
+            "title": "Крутость",
+            "datatype": "integer",
+            "description": "Выберите примерную крутость",
+            "min": 0,
+            "max": 1000,
+            "value": "300",
+            "next": 9
+        },
+
+        {
+            "id": 9,
+            "input": "string",
+            "title": "Ваш e-mail",
+            "description": "",
+            "value": "",
+            "finish": true,
+            "datatype": "string",
+            "next": null,
+            "validates": {
+                "presence": true,
+                "length": {
+                    "min": 4,
+                    "max": 30
+                }
+            }
+        }
+    ]
+}

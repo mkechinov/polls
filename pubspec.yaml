@@ -1,0 +1,5 @@
+name: Poll To Pay
+description: Poll engine
+dependencies:
+  browser: any
+  polymer: ">=0.10.0 <0.11.0"
